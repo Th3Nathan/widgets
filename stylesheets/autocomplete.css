@@ -1,22 +1,22 @@
-#clock{
-  background-color:  #7b5ec3;
+#autocomplete{
+  background-color:  #1b5ec3;
   padding: 10px;
   width: 300px;
   height: 300px;
-  color: #c5f7c5;
+  color: #a5f7c5;
   font-family: sans-serif;
   border-radius: 615%;
-  border: dashed 5px #c5f7c5;
+  border: dashed 5px #a5f7c5;
   text-align: center;
-
 }
 
-
-#clock h1{
+#autocomplete h1{
   font-size: 30px;
   font-weight: bold;
 }
 
-#clock p {
+#autocomplete li {
   font-size: 20px;
+  list-style-type: none;
+  cursor: pointer;
 }

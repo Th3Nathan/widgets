@@ -1,22 +1,22 @@
-#clock{
-  background-color:  #7b5ec3;
+#weather{
+  background-color: #c5f7c5;
   padding: 10px;
   width: 300px;
   height: 300px;
-  color: #c5f7c5;
+  color: #7b5ec3;
   font-family: sans-serif;
   border-radius: 615%;
-  border: dashed 5px #c5f7c5;
+  border: dashed 5px #7b5ec3;
   text-align: center;
-
 }
 
 
-#clock h1{
+#weather h1{
   font-size: 30px;
   font-weight: bold;
 }
 
-#clock p {
+#weather p {
   font-size: 20px;
+  font-weight: bold;
 }

@@ -17,7 +17,7 @@ class Clock extends React.Component{
           Time
         </p>
         <p>
-          {this.state.time.toTimeString()}
+          {this.state.time.toLocaleTimeString('en-US')}
         </p>
         <p>
           Date
