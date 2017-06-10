@@ -1,0 +1,28 @@
+#tabs{
+  background-color: red;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+  color: yellow;
+  font-family: sans-serif;
+  border-radius: 615%;
+  border: dashed 5px yellow;
+  text-align: center;
+}
+
+#header {
+  display:flex;
+  padding:15px;
+}
+
+#tabs article{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#tabs h1 {
+  font-size: 20px;
+  list-style-type: none;
+  cursor: pointer;
+  margin: 10px;
+}
