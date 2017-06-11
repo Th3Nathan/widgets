@@ -1,8 +1,8 @@
 import React from "react";
-import Clock from "./clock";
-import Weather from "./weather";
-import AutoComplete from "./autocomplete";
-import Tabs from "./tabs";
+import Clock from "./widgets/clock";
+import Weather from "./widgets/weather";
+import AutoComplete from "./widgets/autocomplete";
+import Tabs from "./widgets/tabs";
 
 
 const names = ["nathan", "calvin", "michael", "Euridiche", "Orpheus", "Constantine", "Jeremiah", "Jesus", "Beethoven", "Brie", "Brieanna"];
@@ -13,18 +13,16 @@ const tabs = [
   {title: "Daug", content: "woof woof Im a KorG.I. JO"}
 ];
 
-class App extends React.Component{
-  render(){
-    return (
-      <section id="container">
+const App = function(){
+  return (
+    <section id="container">
         <Clock />
         <Weather />
         <AutoComplete names={names} />
         <Tabs tabs={tabs} />
       </section>
     );
-  }
+};
 
-}
 
 export default App;

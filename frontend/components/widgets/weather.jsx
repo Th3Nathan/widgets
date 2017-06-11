@@ -3,7 +3,7 @@ import React from "react";
 class Weather extends React.Component {
   constructor(){
     super();
-    this.state = {};
+    this.state = {weather: {}};
   }
 
   kToF(temp){
@@ -22,23 +22,18 @@ class Weather extends React.Component {
       request.onload = () => {
         if(request.status >= 200 && request.status < 400){
           let parsed = JSON.parse(request.responseText);
-          this.setState({
-            temperature: this.kToF(parsed.main.temp)
-          });
+          const temperature = this.kToF(parsed.main.temp);
+          const location = parsed.name;
+          const description = parsed.weather[0].description;
 
           this.setState({
-            location: parsed.name
+            weather: {temperature, location, description}
           });
-          this.setState({
-            description: parsed.weather[0].description
-          });
-
           console.log(this.state);
         } else {
           console.log("you effed up!!!");
         }
       };
-
       request.send();
     });
   }
@@ -46,9 +41,9 @@ class Weather extends React.Component {
     return(
       <section id="weather">
         <h1>Weather</h1>
-        <p className="Location">{this.state.location}</p>
-        <p className="Temperature">{this.state.temperature}</p>
-        <p className="Description">{this.state.description}</p>
+        <p className="Location">{this.state.weather.location}</p>
+        <p className="Temperature">{this.state.weather.temperature}</p>
+        <p className="Description">{this.state.weather.description}</p>
       </section>
     );
   }
